@@ -10,9 +10,18 @@ const tempoObjetivo04 = new Date ("2025-02-20T00:00:00")
 
 const tempos = [tempoObjetivo01, tempoObjetivo02, tempoObjetivo03, tempoObjetivo04]
 
+function atualizaCronometro () {
 for (let i = 0; i<tempos.length; i++){
-    contadores[i].textContent = calculaTempo(tempos[i])
+        contadores[i].textContent = calculaTempo(tempos[i])
+    }
 }
+
+
+function atualizaCronometro(){
+    atualizaCronometro()
+    setInterval(atualizaCronometro, 1000)
+        
+    }
 
 for(let i = 0; i<botoes.length; i++){
     botoes[i].onclick = function (){
@@ -41,6 +50,11 @@ function calculaTempo (tempoObjetivo) {
     segundos%= 60;
     minutos%= 60;
     horas%= 24;
+    if (tempoFinal > 0){
 
-    return dia + " Dias " + horas + " Horas " + minutos + " Minutos " + segundos + " Segundos"
+        return dia + " Dias " + horas + " Horas " + minutos + " Minutos " + segundos + " Segundos"
+    } else {
+        return "Prazo finalizado"   
 }
+}
+

@@ -28,7 +28,7 @@ body{
     
 }
 .titulo-principal{
-    color: var(--branco);
+   
     text-align:left;
     width: 100%;
     font-size: 40px;
@@ -68,13 +68,14 @@ body{
 
 .botao.ativo{
     background-color: var(--branco);
-    border-bottom: var(--preto);
+    border-bottom: 4px solid var(--preto)
 }
 
 .abas-textos{
     background-color: var(--branco);
     padding: 40px;
     border-radius: 0 0 40px 40px;
+    width: 80%;
 }
  
 .aba-conteudo.ativo{
@@ -94,9 +95,31 @@ body{
 .aba-conteudo-titulo-secundario{
     text-align: center;
     color: var(--preto);
+    text-transform: uppercase;
 }
 
+.contador{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
+.contador-digito{
+    padding: 0 16px;
+    text-align: center;
+    min-width: 100px;
+}
+
+.contador-digito-numero{
+    font-size: 65px;
+    margin: 0;
+}
+
+.contador-digito-texto{
+    color: var(--branco);
+    font-size: 20px;
+    margin: 0;
+}
 
 @media screen and (min-width: 768px){
     .botoes{
